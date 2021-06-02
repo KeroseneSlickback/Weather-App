@@ -9,13 +9,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="formDiv">
-    <form action="" id="formContainer">
-
-    </form>
+  <h1 id="header">Dual Weather App</h1>
+  <div id="main-container">
+    <div id="left-wrap">
+      <form class="search" id="left-form">
+        <input type="text" id="left-search" placeholder="Enter a City Name...">
+        <button id="left-degree" class="swapDegree" type="button" name="swapDegree"></button>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="container1"></div>
+    </div>
+    <div id="right-wrap">
+      <form class="search" id="right-form">
+        <input type="text" id="right-search" placeholder="Enter a City Name...">
+        <button id="right-degree" class="swapDegree" type="button" name="swapDegree"></button>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="container2"></div>
+    </div>
   </div>
-  <div id="container1"></div>
-  <div id="container2"></div>
+  
   <script src="app.js"></script>
 </body>
 </html>
