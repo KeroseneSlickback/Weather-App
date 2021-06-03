@@ -1,13 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)),
+		url(./imgs/wolfgang-hasselmann-bR_-gllg7Bs-unsplash.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+img {
+	filter: invert(1);
+}
+
 h1 {
-	font-size: 4rem;
+	font-size: 3.5rem;
 }
 
 h2 {
-	font-size: 3rem;
+	font-size: 3.1rem;
 }
 
 h3 {
-	font-size: 1.8rem;
+	font-size: 2.5rem;
 }
 
 p {
@@ -21,19 +37,60 @@ p {
 #main-container {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 	align-items: center;
 }
 
 #left-wrap,
 #right-wrap {
-	margin: 30px;
-	border: 8px solid black;
-	border-radius: 7px;
-	padding: 20px;
+	margin-bottom: 50px;
+	margin: 0px 10px;
 }
 
-#container1 > *,
-#container2 > * {
-	padding: 10px;
+.top-div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.weather-blocks {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.descriptions {
+	text-align: center;
+}
+
+.mid-pic {
+	width: 25%;
+	padding-right: 15px;
+}
+
+.small-pic {
+	width: 15%;
+	padding-right: 15px;
+}
+
+#left-search,
+#right-search {
+	font-size: 1.2rem;
+	background: transparent;
+	border: none;
+	border-bottom: 5px solid white;
+}
+
+::placeholder {
+	color: white;
+}
+
+button {
+	font-size: 1rem;
+	border: none;
+	background: white;
+	padding: 6px 14px;
+	border-radius: 1px;
 }

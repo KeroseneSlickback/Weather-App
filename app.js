@@ -170,13 +170,16 @@ class Weather {
 		const getDiv = document.getElementById(this.container);
 		getDiv.innerText = '';
 
+		const topDiv = document.createElement('div');
+		topDiv.classList.add('top-div');
 		const cityH1 = document.createElement('h1');
 		cityH1.classList.add('locations');
 		cityH1.innerText = city;
-		getDiv.appendChild(cityH1);
+		getDiv.appendChild(topDiv);
+		topDiv.appendChild(cityH1);
 
 		const weatherPic = document.createElement('img');
-		weatherPic.classList.add('imgs');
+		weatherPic.classList.add('large-pic');
 		if (weatherCond === 'Clear') {
 			weatherPic.src = 'imgs/sun.png';
 		} else if (weatherCond === 'Clouds') {
@@ -188,27 +191,48 @@ class Weather {
 		} else {
 			weatherPic.src = 'imgs/summer.png';
 		}
-		getDiv.appendChild(weatherPic);
+		topDiv.appendChild(weatherPic);
 
+		const tempDiv = document.createElement('div');
+		tempDiv.classList.add('weather-blocks');
+		const tempPic = document.createElement('img');
+		tempPic.classList.add('mid-pic');
+		tempPic.src = 'imgs/thermometer.png';
 		const tempH2 = document.createElement('h2');
 		tempH2.classList.add('temperatures');
 		tempH2.innerText = `${temp}° ${this.degree}`;
-		getDiv.appendChild(tempH2);
+		getDiv.appendChild(tempDiv);
+		tempDiv.appendChild(tempPic);
+		tempDiv.appendChild(tempH2);
 
 		const weatherH3 = document.createElement('h3');
 		weatherH3.classList.add('descriptions');
 		weatherH3.innerText = weather;
 		getDiv.appendChild(weatherH3);
 
+		const windDiv = document.createElement('div');
+		windDiv.classList.add('weather-blocks');
+		const windPic = document.createElement('img');
+		windPic.classList.add('small-pic');
+		windPic.src = 'imgs/wind.png';
 		const windP = document.createElement('p');
 		windP.classList.add('winds');
 		windP.innerText = `Wind: ${windDirec} ${windSpeed} ${windSpeedRating}`;
-		getDiv.appendChild(windP);
+		getDiv.appendChild(windDiv);
+		windDiv.appendChild(windPic);
+		windDiv.appendChild(windP);
 
+		const humidDiv = document.createElement('div');
+		humidDiv.classList.add('weather-blocks');
+		const humidPic = document.createElement('img');
+		humidPic.classList.add('small-pic');
+		humidPic.src = 'imgs/humid.png';
 		const humidP = document.createElement('p');
 		humidP.classList.add('humiditys');
 		humidP.innerText = `Humidity: ${humidity}%`;
-		getDiv.appendChild(humidP);
+		getDiv.appendChild(humidDiv);
+		humidDiv.appendChild(humidPic);
+		humidDiv.appendChild(humidP);
 	}
 }
 
